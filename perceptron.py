@@ -1,8 +1,3 @@
-"""
-In perceptron.py, you will implement the perceptron algorithm for
-binary classification.  You will implement both the vanilla perceptron
-updates as well as the averaged perceptron updates.
-"""
 
 import numpy as np
 
@@ -10,30 +5,14 @@ from binary import BinaryClassifier
 import util
 
 class Perceptron(BinaryClassifier):
-    """
-    This class defines the perceptron implementation of a binary
-    classifier.  See binary.py for details on the abstract class that
-    this implements.
-    """
 
     def __init__(self, opts):
-        """
-        Initialize our internal state.  You probably need to (at
-        least) keep track of a weight vector and a bias.  We'll just
-        call the 'reset' function to do this for us.
-        We will also want to compute simple statistics about how the
-        training of the perceptron is going.  In particular, you
-        should keep track of how many updates have been made total.
-        """
-
+        
         BinaryClassifier.__init__(self, opts)
         self.opts = opts
         self.reset()
 
     def reset(self):
-        """
-        Reset the internal state of the classifier.
-        """
 
         self.weights = 0    # our weight vector
         self.bias    = 0    # our bias
